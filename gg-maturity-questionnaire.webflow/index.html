@@ -522,7 +522,7 @@
           toggleClassSelected(event) {
             targetId = event.currentTarget.id;
             this.isActive = targetId;
-
+            /*
             if (this.pageIdX === 3) {
               this.screen3Value = this.isActive.slice(-1);
             } else if (this.pageIdX === 4) {
@@ -531,6 +531,20 @@
               this.screen5Value = this.isActive.slice(-1);
             } else if (this.pageIdX === 6) {
               this.screen6Value = this.isActive.slice(-1);
+            }*/
+            switch (this.pageIdX) {
+              case 3:
+                this.screen3Value = this.isActive.slice(-1);
+                break;
+              case 4:
+                this.screen4Value = this.isActive.slice(-1);
+                break;
+              case 5:
+                this.screen5Value = this.isActive.slice(-1);
+                break;
+              case 6:
+                this.screen6Value = this.isActive.slice(-1);
+                break;
             }
             this.answers.push({
               DeveloperEnvironments: this.screen3Value,
